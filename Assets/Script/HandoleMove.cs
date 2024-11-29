@@ -8,6 +8,7 @@ public class HandoleMove : MonoBehaviour
     Vector3 MyVec3;
     Vector3 BackVec3;
     Rigidbody2D rb;
+    float rotationZ;
 
     void Start()
     {
@@ -16,21 +17,32 @@ public class HandoleMove : MonoBehaviour
 
     void Update()
     {
-        float rotationZ = rb.rotation;
+        rotationZ = rb.rotation;
 
         if(rotationZ >= 91)
         {
-            BackVec3   = Backgraund.transform.position;
-            BackVec3.x = rotationZ;
-            Backgraund.transform.position = BackVec3;
+            Move();
             Debug.Log("９０より大きいよ");
         }
         else if(rotationZ <= 89)
         {
-            BackVec3   = Backgraund.transform.position;
-            BackVec3.x = rotationZ;
-            Backgraund.transform.position = BackVec3;
+            Move();
             Debug.Log("９０より小さいよ");     
         }
+    }
+
+    void Move()
+    {
+            BackVec3   = Backgraund.transform.position;
+            BackVec3.x = rotationZ % 2;
+            if(rotationZ >= 8.5f)
+            {
+                BackVec3.x = 8.5f;
+            }
+            if(rotationZ <= -8.5f)
+            {
+                BackVec3.x = -8.5f;
+            }
+            Backgraund.transform.position = BackVec3;
     }
 }
