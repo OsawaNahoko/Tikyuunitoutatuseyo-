@@ -5,7 +5,6 @@ using UnityEngine;
 public class HandoleMove : MonoBehaviour
 {
     [SerializeField] GameObject Backgraund;
-    Vector3 MyVec3;
     Vector3 BackVec3;
     Rigidbody2D rb;
     float rotationZ;
@@ -34,7 +33,7 @@ public class HandoleMove : MonoBehaviour
     void Move()
     {
             BackVec3   = Backgraund.transform.position;
-            BackVec3.x = rotationZ % 2;
+            BackVec3.x = rotationZ;
             if(rotationZ >= 8.5f)
             {
                 BackVec3.x = 8.5f;
