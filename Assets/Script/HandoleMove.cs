@@ -21,14 +21,14 @@ public class HandoleMove : MonoBehaviour
         if(rotationZ >= 91)
         {
             BackVec3   = Backgraund.transform.position;
-            BackVec3.x = -8.5f;
+            BackVec3.x = rotationZ;
             Backgraund.transform.position = BackVec3;
             Debug.Log("９０より大きいよ");
         }
         else if(rotationZ <= 89)
         {
             BackVec3   = Backgraund.transform.position;
-            BackVec3.x = 8.5f;
+            BackVec3.x = rotationZ;
             Backgraund.transform.position = BackVec3;
             Debug.Log("９０より小さいよ");     
         }
