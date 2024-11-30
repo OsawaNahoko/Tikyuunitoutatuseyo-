@@ -7,7 +7,7 @@ public class HandoleMove : MonoBehaviour
     [SerializeField] GameObject Backgraund;
     Vector3 BackVec3;
     Rigidbody2D rb;
-    float rotationZ;
+    float HandoleRotationZ;
 
     void Start()
     {
@@ -16,32 +16,24 @@ public class HandoleMove : MonoBehaviour
 
     void Update()
     {
-        rotationZ = rb.rotation;
-
-        if(rotationZ >= 91)
-        {
-            Move();
-            Debug.Log("９０より大きいよ");
-        }
-        else if(rotationZ <= 89)
-        {
-            Move();
-            Debug.Log("９０より小さいよ");     
-        }
+        HandoleRotationZ = rb.rotation;
+        Move();
     }
 
     void Move()
     {
+            float Loss90RotationZ = HandoleRotationZ - 90;
             BackVec3   = Backgraund.transform.position;
-            BackVec3.x = rotationZ;
-            if(rotationZ >= 8.5f)
+            if(HandoleRotationZ >= 0)
             {
-                BackVec3.x = 8.5f;
+                 BackVec3.x = Loss90RotationZ / 20f;
             }
-            if(rotationZ <= -8.5f)
+            else if(HandoleRotationZ <= 0)
             {
-                BackVec3.x = -8.5f;
+                 BackVec3.x = Loss90RotationZ  / 20f;
             }
+
+
             Backgraund.transform.position = BackVec3;
     }
 }
