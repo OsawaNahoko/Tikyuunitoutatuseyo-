@@ -33,7 +33,6 @@ public class HandoleMove : MonoBehaviour
                  BackVec3.x = Loss90RotationZ  / 20f;
             }
 
-
             Backgraund.transform.position = BackVec3;
     }
 }
