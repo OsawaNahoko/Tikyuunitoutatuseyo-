@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject CreiaObject;
-    public GameObject[] GameLifeArrey;
+    [SerializeField] GlobalData globalData;
+
+    [SerializeField] Transform  BackimagePalent;
+    [SerializeField]  Transform[] meteoposArrey;
+
+    [SerializeField] GameObject[] GameUIArrey;//0がゲームオーバー1がゲームクリア
+    [SerializeField] GameObject[] GameLifeArrey;
+    [SerializeField] GameObject[] meteoObjArryey;
+
+    Vector2 meteoposV2;
+    int HitCount;
 
     void Start()
     {
-         StartCoroutine("Inseki_Genret");
+        globalData.GameClearFlag = false;
+        globalData.GameOverFlag  = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -17,18 +27,42 @@ public class GameManager : MonoBehaviour
         if(collision.gameObject.tag == "meteorite")
         {
             Debug.Log("隕石に当たったよ");
-            GameLifeArrey[0].SetActive(true);
+            if(HitCount <= GameLifeArrey.Length - 1)
+            {
+                GameLifeArrey[HitCount].SetActive(true);
+                HitCount += 1;
+            }
+
+            if(HitCount == 3 && globalData.GameClearFlag ==false)
+            {
+                GameUIArrey[0].SetActive(true);
+                globalData.GameOverFlag = true;
+            }
         }
         if(collision.gameObject.tag == "eatrth")
         {
             Debug.Log("地球に当たったよ");
-            CreiaObject.SetActive(true);
+            GameUIArrey[1].SetActive(true);
+            globalData.GameClearFlag = true;
         }
     }
 
-    IEnumerator Inseki_Genret()
+    void Update()
     {
-         yield return new WaitForSeconds(0.1f);
+        if(globalData.meteoriteEndFlag == true )
+        {
+            meteoposV2 = meteoposArrey[Random.Range(0,meteoposArrey.Length)].position;
+
+            Debug.Log("隕石をランダムに生成するよ");
+
+            Instantiate(
+            meteoObjArryey[Random.Range(0,meteoObjArryey.Length)],//オブジェクトを選択
+            meteoposV2,//位置
+            Quaternion.identity,//回転軸
+            BackimagePalent//親にするオブジェクトを指定
+            );
+            globalData.meteoriteEndFlag = false;
+        }
     }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class meteorite : Base_planet
 {
-    void OnEnable()
+    void Start()
     {
         StartCoroutine(Inseki_Move(50,0.1f));
     }

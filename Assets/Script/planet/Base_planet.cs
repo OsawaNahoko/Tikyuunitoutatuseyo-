@@ -6,6 +6,7 @@ public class Base_planet : MonoBehaviour
 {
     float Scale;
     BoxCollider2D thiscol2D;
+    [SerializeField] GlobalData globalData;
     
     protected IEnumerator Inseki_Move(int Time,float Speed)
     {
@@ -18,6 +19,11 @@ public class Base_planet : MonoBehaviour
             this.transform.localScale = new Vector3(Scale,Scale,Scale);
             Scale += 0.01f;
             yield return new WaitForSeconds(Speed);
+            
+            if(globalData.GameOverFlag == true)
+            {
+                yield break;
+            }
         }
         if(Scale >= Time * 0.01f - 0.01f)
         {
@@ -27,7 +33,7 @@ public class Base_planet : MonoBehaviour
 
             yield return new WaitForSeconds(3.0f);
             this.transform.localScale = new Vector3(0,0,0);
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
