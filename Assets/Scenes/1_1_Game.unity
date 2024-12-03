@@ -808,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 478.3999}
+  m_AnchoredPosition: {x: 983, y: 649}
   m_SizeDelta: {x: 1308.8965, y: 472.7621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934083060
@@ -865,12 +865,12 @@ GameObject:
   - component: {fileID: 981553706}
   - component: {fileID: 981553705}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: earthDistans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &981553704
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1495,6 +1495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435697687}
   - component: {fileID: 1435697686}
+  - component: {fileID: 1435697690}
   - component: {fileID: 1435697688}
   - component: {fileID: 1435697689}
   m_Layer: 0
@@ -1629,6 +1630,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1435697690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435697685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e3447b5887e46439642afa27f1e105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1444964689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: -61.6001}
+  m_AnchoredPosition: {x: 80, y: 16}
   m_SizeDelta: {x: 1308.8965, y: 472.7621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824302699
@@ -1928,7 +1941,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e0b10259102502344810836822256f65, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
@@ -2374,7 +2387,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e0b10259102502344810836822256f65, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
