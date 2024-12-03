@@ -5,11 +5,19 @@ using UnityEngine;
 public class AnimetionControler : MonoBehaviour
 {
     [SerializeField] Animator[]   AnimatorArray;
-    protected void AnimetionPlaye()
+    protected void GameOverAnimetionPlaye()
     {
         for (int i = 0; i < AnimatorArray.Length; i++)
         {
             AnimatorArray[i].SetBool("GameOverFlag",true);
+        }
+    }
+
+    protected void GameClearAnimetionPlaye()
+    {
+        for (int i = 0; i < AnimatorArray.Length; i++)
+        {
+            AnimatorArray[i].SetBool("GameClearFlag",true);
         }
     }
 }

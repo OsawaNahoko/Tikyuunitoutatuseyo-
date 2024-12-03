@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b06d3c92e8a081a4bb6b84d3110a069b
+guid: 146809c1252abb44d98f96733211faf1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,34 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_8927_0
+      name: IMG_8934_0
       rect:
         serializedVersion: 2
-        x: 125
-        y: 267
-        width: 491
-        height: 531
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11cf5d68b8026024ca70b035fc0ec806
-      internalID: -1213688315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_8927_1
-      rect:
-        serializedVersion: 2
-        x: 653
+        x: 221
         y: 323
-        width: 664
-        height: 664
+        width: 493
+        height: 533
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cef79ec54c342594a8624135f7df2ac9
-      internalID: 1840743253
+      spriteID: af2067af516a5484cbe8a9c763ac595b
+      internalID: 523598637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_8927_2
+      name: IMG_8934_1
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 343
-        width: 464
-        height: 543
+        x: 749
+        y: 379
+        width: 666
+        height: 666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +132,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51316ef0e84ff9d45ab0111a1666ac52
-      internalID: -1689599905
+      spriteID: 32b850ecddd481f4b9bc0f8b572ec9b4
+      internalID: 57182272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_8934_2
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 399
+        width: 467
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2042e3f04a8add44fbbd27d2eedf2146
+      internalID: 1355021611
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_8927_0: -1213688315
-      IMG_8927_1: 1840743253
-      IMG_8927_2: -1689599905
+      IMG_8934_0: 523598637
+      IMG_8934_1: 57182272
+      IMG_8934_2: 1355021611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
