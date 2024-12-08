@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 217138563}
   - component: {fileID: 217138562}
   m_Layer: 0
-  m_Name: IMG_8938
+  m_Name: flontGras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,12 +353,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217138561}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1764705, y: 1.1764705, z: 1.1764705}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1140627681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228485791
 GameObject:
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 549320121}
   - component: {fileID: 549320120}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: infometionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -593,15 +593,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549320118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.00008, y: 1.00008, z: 1.00008}
+  m_LocalPosition: {x: 0, y: 0, z: 105.88235}
+  m_LocalScale: {x: 0.010894117, y: 0.010894117, z: 0.010894117}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1702627292}
+  m_Father: {fileID: 1140627681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 418}
+  m_AnchoredPosition: {x: -0.04357314, y: 4.5533752}
   m_SizeDelta: {x: 525.84, y: 80.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549320120
@@ -1205,6 +1205,7 @@ GameObject:
   - component: {fileID: 1111647999}
   - component: {fileID: 1111647997}
   - component: {fileID: 1111648001}
+  - component: {fileID: 1111648002}
   m_Layer: 0
   m_Name: Handole
   m_TagString: Untagged
@@ -1253,13 +1254,13 @@ MonoBehaviour:
             m_StringArgument: AN_GameStart_Hand_L
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1603673401}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: PlayOneShot
-          m_Mode: 2
+        - m_Target: {fileID: 1852719846}
+          m_TargetAssemblyTypeName: StartSEManager, Assembly-CSharp
+          m_MethodName: SEPlay
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: a6aa757b7cd52fa408dee71561175ff6, type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1394,7 +1395,7 @@ Transform:
   m_GameObject: {fileID: 1111647996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.1606797, y: -3.1, z: 0}
+  m_LocalPosition: {x: 0.16, y: -3.1, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1435,6 +1436,27 @@ CircleCollider2D:
   m_Offset: {x: -0.19101863, y: -0.041531812}
   serializedVersion: 2
   m_Radius: 3.0750005
+--- !u!95 &1111648002
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111647996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7abb8ee3c4cc1014f9fd9d013bca3071, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1140627679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,12 +1535,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140627679}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -9720}
+  m_LocalScale: {x: 91.8, y: 91.8, z: 91.8}
   m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 549320119}
+  - {fileID: 217138563}
+  m_Father: {fileID: 1702627292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1140627682
 Animator:
@@ -2041,7 +2065,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 549320119}
+  - {fileID: 1140627681}
   - {fileID: 1514334319}
   - {fileID: 12605359}
   m_Father: {fileID: 0}
@@ -2127,7 +2151,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2224,6 +2248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc73c11beb062840aeff1786015ab8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 10
 --- !u!114 &1852719846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2236,6 +2261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a128238616bbe944da71156726c20a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundArrey:
+  - {fileID: 8300000, guid: a6aa757b7cd52fa408dee71561175ff6, type: 3}
+  - {fileID: 8300000, guid: 4c8a1efb0e5685b45a8e7af6e48b5b04, type: 3}
+  AnimatorArray:
+  - {fileID: 1111648002}
+  - {fileID: 1140627682}
+  FlagArray:
+  - GameStaretFlag
+  WaitTime: 1
 --- !u!1 &2090757749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,13 +2359,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1852719841}
   - {fileID: 770418809}
   - {fileID: 1111648000}
   - {fileID: 1271173187}
   - {fileID: 1702627292}
-  - {fileID: 1852719841}
   - {fileID: 930841557}
-  - {fileID: 1140627681}
-  - {fileID: 217138563}
   - {fileID: 241193087}
   - {fileID: 244930764}

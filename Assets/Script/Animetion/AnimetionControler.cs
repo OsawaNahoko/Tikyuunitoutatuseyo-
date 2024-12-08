@@ -5,20 +5,15 @@ using UnityEngine;
 public class AnimetionControler : Soundplayer
 {
     [SerializeField] Animator[]   AnimatorArray;
-    protected void GameOverAnimetionPlaye()
+    [SerializeField] string[]     FlagArray;
+
+    protected void AnimetionPlaye(int Flag)
     {
         for (int i = 0; i < AnimatorArray.Length; i++)
         {
-            AnimatorArray[i].SetBool("GameOverFlag",true);
+            AnimatorArray[i].SetBool(FlagArray[Flag],true);
         }
     }
 
-    protected void GameClearAnimetionPlaye()
-    {
-        for (int i = 0; i < AnimatorArray.Length; i++)
-        {
-            AnimatorArray[i].SetBool("GameClearFlag",true);
-        }
-    }
 }
    

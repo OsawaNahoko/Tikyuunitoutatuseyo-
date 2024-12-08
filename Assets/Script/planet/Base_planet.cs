@@ -6,30 +6,33 @@ public class Base_planet : MonoBehaviour
 {
     decimal Scaledecimal;
     float Scalefloat;
-    BoxCollider2D thiscol2D;
+
     [SerializeField] protected GlobalData globalData;
     
-    protected IEnumerator planet_Move(int Time,float Speed)
+    protected IEnumerator planet_Move(int planetScale,float WaitTime,decimal AddScale)
     {
-        //自身のコライダーを取得。
-        thiscol2D = GetComponent<BoxCollider2D>();
+        //自身のコライダーとスプライトレンダーを取得。
+        var thiscol2D       = this.gameObject.GetComponent<BoxCollider2D>();
+        var thisSpliteRend  = this.gameObject.GetComponent<SpriteRenderer>();
+        
 
         //隕石を徐々に大きくしてます。
-        for(int i = 0; i < Time; i++)
+        for(int i = 0; i < planetScale; i++)
         {
             //decimalの値を代入
-            Scaledecimal += 0.01m;
+            Scaledecimal += AddScale;
             Scalefloat = (float)Scaledecimal;
 
             this.transform.localScale = new Vector3(Scalefloat,Scalefloat,Scalefloat);
-            yield return new WaitForSeconds(Speed);
+            yield return new WaitForSeconds(WaitTime);
 
             if(globalData.GameOverFlag == true)
             {
                 yield break;
             }
         }
-        if(Scalefloat >= Time * 0.01f)
+
+        if(Scalefloat >= planetScale * 0.01)
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");
@@ -40,9 +43,4 @@ public class Base_planet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
-    // decimal Scale(decimal Scaledecimal)
-    // {
-    //     return  
-    // }
 }

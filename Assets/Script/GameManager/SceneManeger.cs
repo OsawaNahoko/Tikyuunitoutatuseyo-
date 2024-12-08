@@ -4,10 +4,11 @@ using UnityEngine.EventSystems;
 
 public class SceneScript : MonoBehaviour
 { 
+    public float DelayTime;
     public void DelayLoad_GameScene(BaseEventData data)
     {
         Debug.Log("ロードすると思う");
-        Invoke("Load_GameScene",2.0f);
+        Invoke("Load_GameScene",DelayTime);
     }
 
      public void Load_GameScene()
