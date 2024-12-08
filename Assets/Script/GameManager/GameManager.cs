@@ -39,8 +39,8 @@ public class GameManager : AnimetionControler
             {
                 //ゲームオーバーになったら
                 GameUIArrey[0].SetActive(true);
-                PlaySound(1)
-                GameOverAnimetionPlaye();
+                PlaySound(1);
+                AnimetionPlaye(0);
                 globalData.GameOverFlag = true;
             }
         }
@@ -49,7 +49,7 @@ public class GameManager : AnimetionControler
             //ゲームクリアになったら
             Debug.Log("地球に当たったよ");
             GameUIArrey[1].SetActive(true);
-            GameClearAnimetionPlaye();
+            AnimetionPlaye(1);
             globalData.GameClearFlag = true;
         }
     }

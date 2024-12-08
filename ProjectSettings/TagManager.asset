@@ -6,6 +6,7 @@ TagManager:
   tags:
   - eatrth
   - meteorite
+  - GameManager
   layers:
   - Default
   - TransparentFX

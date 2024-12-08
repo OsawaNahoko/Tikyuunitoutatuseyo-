@@ -11,15 +11,9 @@ public class meteoChack : MonoBehaviour
     [SerializeField] Transform[] meteoposArrey;
 
     Vector2 meteoposV2;
-
-    void Start()
-    {
-        globalData.meteoriteEndFlag = false;
-    }
-
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
-        globalData.meteoriteEndFlag = true;
         var CollCorisyion = collision.gameObject.GetComponent<BoxCollider2D>();
         CollCorisyion.enabled = false;
         meteoposV2 = meteoposArrey[Random.Range(0,meteoposArrey.Length)].position;
@@ -32,7 +26,6 @@ public class meteoChack : MonoBehaviour
         Quaternion.identity,//回転軸
         BackimagePalent//親にするオブジェクトを指定
         );
-        globalData.meteoriteEndFlag = false;
     }
 
 }

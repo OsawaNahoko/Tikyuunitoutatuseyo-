@@ -1119,8 +1119,8 @@ GameObject:
   - component: {fileID: 1111647999}
   - component: {fileID: 1111648005}
   - component: {fileID: 1111647998}
-  - component: {fileID: 1111647997}
   - component: {fileID: 1111648007}
+  - component: {fileID: 1111647997}
   - component: {fileID: 1111648004}
   - component: {fileID: 1111648001}
   - component: {fileID: 1111648003}
@@ -1266,7 +1266,7 @@ Transform:
   m_GameObject: {fileID: 1111647996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.1606797, y: -3.1, z: 0}
+  m_LocalPosition: {x: 0.16, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1317,7 +1317,7 @@ HingeJoint2D:
   m_BreakAction: 0
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.1606797, y: -3.1}
+  m_ConnectedAnchor: {x: 0.16, y: -3.1}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 10
@@ -1488,13 +1488,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140627679}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.44, z: 0}
-  m_LocalScale: {x: 0.9821, y: 0.9684, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -47.52, z: -9720}
+  m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 240857132}
-  m_Father: {fileID: 0}
+  - {fileID: 1866741353}
+  m_Father: {fileID: 1702627292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1140627682
 Animator:
@@ -2122,7 +2123,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1866741353}
+  - {fileID: 1140627681}
   - {fileID: 2032098500}
   - {fileID: 25666235}
   m_Father: {fileID: 0}
@@ -2365,7 +2366,7 @@ GameObject:
   - component: {fileID: 1852719844}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2443,18 +2444,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608b06df873325846a23eae8ae3bc5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundArrey:
+  - {fileID: 8300000, guid: 07759f029b4d7b04f978dc9de6e0f50c, type: 3}
+  - {fileID: 8300000, guid: b536ed2ab7adeef45b7404dfd816024f, type: 3}
   AnimatorArray:
   - {fileID: 1140627682}
   - {fileID: 1111648006}
+  FlagArray:
+  - GameOverFlag
+  - GameClearFlag
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
-  GameUIArrey:
-  - {fileID: 2032098499}
-  - {fileID: 25666234}
   GameLife: {fileID: 240857130}
   GameLifeArrey:
   - {fileID: 21300000, guid: 40effcdd41fabc544a095106b81ee93c, type: 3}
   - {fileID: 21300000, guid: 0fbab553b854c5e4fbb29aa5f9d80a0b, type: 3}
   - {fileID: 21300000, guid: 9dcde2d7d7c7d204a8d620b4501e1abc, type: 3}
+  GameUIArrey:
+  - {fileID: 2032098499}
+  - {fileID: 25666234}
 --- !u!50 &1852719843
 Rigidbody2D:
   serializedVersion: 4
@@ -2590,6 +2597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc73c11beb062840aeff1786015ab8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DelayTime: 0.5
 --- !u!114 &1852719846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2635,13 +2643,13 @@ Transform:
   m_GameObject: {fileID: 1866741352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9720}
-  m_LocalScale: {x: 108, y: 108, z: 108}
+  m_LocalPosition: {x: 0, y: 0.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1956865862}
   - {fileID: 851784071}
-  m_Father: {fileID: 1702627292}
+  m_Father: {fileID: 1140627681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955867374
 GameObject:
@@ -3070,6 +3078,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5740672023544101649, guid: dcef4e804f371de45afebabed9ffa2df, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3086,4 +3098,3 @@ SceneRoots:
   - {fileID: 1435697687}
   - {fileID: 1702627292}
   - {fileID: 1852719841}
-  - {fileID: 1140627681}
