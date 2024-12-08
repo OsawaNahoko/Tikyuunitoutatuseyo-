@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimetionControler : MonoBehaviour
+public class AnimetionControler : Soundplayer
 {
     [SerializeField] Animator[]   AnimatorArray;
     protected void GameOverAnimetionPlaye()

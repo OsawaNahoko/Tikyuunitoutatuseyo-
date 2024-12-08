@@ -24,13 +24,9 @@ public class HandoleMove : MonoBehaviour
     {
             float Loss90RotationZ = HandoleRotationZ - 90;
             BackVec3   = Backgraund.transform.position;
-            if(HandoleRotationZ >= 0)
+            if(HandoleRotationZ >= 0 || HandoleRotationZ <= 0)
             {
-                 BackVec3.x = Loss90RotationZ / 20f;
-            }
-            else if(HandoleRotationZ <= 0)
-            {
-                 BackVec3.x = Loss90RotationZ  / 20f;
+                 BackVec3.x = Loss90RotationZ / 15f;
             }
 
             Backgraund.transform.position = BackVec3;

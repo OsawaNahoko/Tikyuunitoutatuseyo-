@@ -6,7 +6,6 @@ public class Soundplayer : MonoBehaviour
 {
     [SerializeField] AudioClip[] soundArrey;
     AudioSource audioSource;
-    //０は正解　１は不正解
 
     protected void PlaySound(int Number)
     {

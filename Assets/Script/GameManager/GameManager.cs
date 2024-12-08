@@ -6,9 +6,9 @@ public class GameManager : AnimetionControler
 {
     [SerializeField] GlobalData globalData;
 
-    [SerializeField] GameObject[] GameUIArrey;//0がゲームオーバー1がゲームクリア
     [SerializeField] GameObject   GameLife;
     [SerializeField] Sprite[]     GameLifeArrey;
+    [SerializeField] GameObject[] GameUIArrey;//0がゲームオーバー1がゲームクリア
  
 
 
@@ -31,6 +31,7 @@ public class GameManager : AnimetionControler
             {
                 //隕石に衝突したら
                 LifeSpriterend.sprite = GameLifeArrey[HitCount];
+                PlaySound(0);
                 HitCount += 1;
             }
 
@@ -38,6 +39,7 @@ public class GameManager : AnimetionControler
             {
                 //ゲームオーバーになったら
                 GameUIArrey[0].SetActive(true);
+                PlaySound(1)
                 GameOverAnimetionPlaye();
                 globalData.GameOverFlag = true;
             }
