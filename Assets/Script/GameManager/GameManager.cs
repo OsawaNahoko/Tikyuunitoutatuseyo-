@@ -6,15 +6,12 @@ public class GameManager : AnimetionControler
 {
     [SerializeField] GlobalData globalData;
 
-    [SerializeField] Transform  BackimagePalent;
-    [SerializeField] Transform[] meteoposArrey;
-
     [SerializeField] GameObject[] GameUIArrey;//0がゲームオーバー1がゲームクリア
     [SerializeField] GameObject   GameLife;
     [SerializeField] Sprite[]     GameLifeArrey;
-    [SerializeField] GameObject[] meteoObjArryey;
+ 
 
-    Vector2 meteoposV2;
+
     int HitCount;
     SpriteRenderer  LifeSpriterend;
 
@@ -52,24 +49,6 @@ public class GameManager : AnimetionControler
             GameUIArrey[1].SetActive(true);
             GameClearAnimetionPlaye();
             globalData.GameClearFlag = true;
-        }
-    }
-
-    void Update()
-    {
-        if(globalData.meteoriteEndFlag == true )
-        {
-            meteoposV2 = meteoposArrey[Random.Range(0,meteoposArrey.Length)].position;
-
-            Debug.Log("隕石をランダムに生成するよ");
-
-            Instantiate(
-            meteoObjArryey[Random.Range(0,meteoObjArryey.Length)],//オブジェクトを選択
-            meteoposV2,//位置
-            Quaternion.identity,//回転軸
-            BackimagePalent//親にするオブジェクトを指定
-            );
-            globalData.meteoriteEndFlag = false;
         }
     }
 

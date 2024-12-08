@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class earth : Base_planet
+public class earth : earth_Distans
 {
+    [SerializeField]int earthTime;
+    [SerializeField]decimal earthSpeed;
+
     void Start()
     {
-        StartCoroutine(Inseki_Move(100,1.0f));
+        StartCoroutine(planet_Move(earthTime,earthSpeed));
+        StartCoroutine(earthDistansCount(earthTime * 10,earthSpeed * 0.1m));
     }
 }

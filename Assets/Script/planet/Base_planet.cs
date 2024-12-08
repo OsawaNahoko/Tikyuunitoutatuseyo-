@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Base_planet : MonoBehaviour
 {
-    float Scale;
+    decimal Scale;
     BoxCollider2D thiscol2D;
-    [SerializeField] GlobalData globalData;
+    [SerializeField] protected GlobalData globalData;
     
-    protected IEnumerator Inseki_Move(int Time,float Speed)
+    protected IEnumerator planet_Move(int Time,decimal Speed)
     {
         //自身のコライダーを取得。
         thiscol2D = GetComponent<BoxCollider2D>();
@@ -17,7 +17,7 @@ public class Base_planet : MonoBehaviour
         for(int i = 0; i < Time; i++)
         {
             this.transform.localScale = new Vector3(Scale,Scale,Scale);
-            Scale += 0.01f;
+            Scale += 0.01m;
             yield return new WaitForSeconds(Speed);
             
             if(globalData.GameOverFlag == true)
@@ -25,7 +25,7 @@ public class Base_planet : MonoBehaviour
                 yield break;
             }
         }
-        if(Scale >= Time * 0.01f - 0.01f)
+        if(Scale >= Time * 0.01f)
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");
