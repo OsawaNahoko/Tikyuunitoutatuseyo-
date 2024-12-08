@@ -32,7 +32,11 @@ public class Base_planet : MonoBehaviour
             }
         }
 
+<<<<<<< HEAD
         if(Scalefloat >= planetScale * 0.01)
+=======
+        if(Scalefloat >= Time * 0.01f)
+>>>>>>> 58a84ed768b2f14aebfce77287fd9e8446707d54
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");
