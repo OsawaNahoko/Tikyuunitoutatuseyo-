@@ -22,10 +22,11 @@ public class StartStaging : AnimetionControler
     IEnumerator Staging(float Time)
     {
         PlaySound(0);
-        AnimetionPlaye(0);
+        PlayAnimetion(0);
 
         yield return new WaitForSeconds(Time);
 
         PlaySound(1);
+        PlayAnimetion(1);
     }
 }

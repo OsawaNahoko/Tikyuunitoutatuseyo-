@@ -133,8 +133,9 @@ GameObject:
   - component: {fileID: 12605359}
   - component: {fileID: 12605361}
   - component: {fileID: 12605360}
+  - component: {fileID: 12605362}
   m_Layer: 5
-  m_Name: Titeli
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,6 +202,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12605358}
   m_CullTransparentMesh: 1
+--- !u!95 &12605362
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12605358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec9ce473e6c0a7e449c8b96b2259ff79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &209256720
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 228485791}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: -11.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -852,6 +874,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4bfe05e94130b41bceb8b424504d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundArrey: []
+  AnimatorArray: []
+  FlagArray: []
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   BackimagePalent: {fileID: 0}
   meteoObjArryey: []
@@ -2248,7 +2273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc73c11beb062840aeff1786015ab8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 10
+  DelayTime: 5
 --- !u!114 &1852719846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2267,8 +2292,10 @@ MonoBehaviour:
   AnimatorArray:
   - {fileID: 1111648002}
   - {fileID: 1140627682}
+  - {fileID: 12605362}
   FlagArray:
   - GameStaretFlag
+  - GameNextStaretFlag
   WaitTime: 1
 --- !u!1 &2090757749
 GameObject:
