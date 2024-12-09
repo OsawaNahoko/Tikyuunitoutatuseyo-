@@ -10,8 +10,6 @@ public class GameManager : AnimetionControler
     [SerializeField] Sprite[]     GameLifeArrey;
     [SerializeField] GameObject[] GameUIArrey;//0がゲームオーバー1がゲームクリア
  
-
-
     int HitCount;
     SpriteRenderer  LifeSpriterend;
 

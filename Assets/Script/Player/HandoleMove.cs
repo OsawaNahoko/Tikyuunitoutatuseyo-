@@ -25,6 +25,8 @@ public class HandoleMove : MonoBehaviour
 
     void Move()
     {
+        if(earth != null)
+        {
             float Loss90RotationZ = HandoleRotationZ - 90;
 
             //ObjectのポジションをVec3に変換しています。
@@ -40,6 +42,7 @@ public class HandoleMove : MonoBehaviour
             //Objectに計算結果を代入しています。
             Backgraund.transform.position = BackVec3;
             earth.transform.position      = earthVec3;
+        }
 
     }
 }

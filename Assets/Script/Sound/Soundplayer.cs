@@ -11,8 +11,7 @@ public class Soundplayer : MonoBehaviour
     {
         if(audioSource == null)
         {
-            audioSource = GetComponent<AudioSource>();
-            Debug.Log("Nullでした");
+            audioSource = this.gameObject.GetComponent<AudioSource>();
         }
         audioSource.PlayOneShot(soundArrey[Number]);
     }
