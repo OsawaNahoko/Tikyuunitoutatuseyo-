@@ -8,7 +8,6 @@ public class GameManager : SEplayer
     [SerializeField] GlobalData globalData;
 
     [SerializeField] GameObject   GameLife;
-    [SerializeField] GameObject   FadeObject;
     [SerializeField] Sprite[]     GameLifeArrey;
     [SerializeField] GameObject[] GameUIArrey;
 
@@ -17,7 +16,6 @@ public class GameManager : SEplayer
     public static bool GameSeneFlag;
     int HitCount;
     SpriteRenderer  LifeSpriterend;
-    SpriteRenderer  FadeSpriterend;
     
     public void FadeIN()
     {
@@ -29,24 +27,15 @@ public class GameManager : SEplayer
         PlayFadeOUT();
     }
 
-    void Awake()
-    {
-         if(GameSeneFlag == true)
-        {
-            FadeSpriterend.color = new (0,0,0,255);
-        }
-    }
-
     void Start()
     {
         globalData.GameClearFlag = false;
         globalData.GameOverFlag  = false;
         LifeSpriterend           = GameLife.GetComponent<SpriteRenderer>();
-        FadeSpriterend           = FadeObject.GetComponent<SpriteRenderer>();
-        OnActiveSceneChanged();
+        SceneChanged();
     }
 
-    void OnActiveSceneChanged()
+    void SceneChanged()
     {
         if(GameSeneFlag == true)
         { 

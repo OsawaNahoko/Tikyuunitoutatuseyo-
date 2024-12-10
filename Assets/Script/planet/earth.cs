@@ -14,6 +14,6 @@ public class earth : earth_Distans
         StartCoroutine(planet_Move(earthScale,earthWaitTime,earthSpeed));
 
         //eath_Distansから呼び出しています。
-        StartCoroutine(earthDistansCount(earthScale * 100,earthWaitTime * 0.071f));
+        StartCoroutine(earthDistansCount(earthScale * 100,earthWaitTime * 0.065f));
     }
 }

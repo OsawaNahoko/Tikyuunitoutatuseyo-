@@ -6,6 +6,7 @@ public class StartStaging : SEplayer
 {
     bool PlayFlag = false;
     [SerializeField]float WaitTime;
+    [SerializeField]GameObject earthDistansObj;
 
 
     void Awake()
@@ -36,5 +37,9 @@ public class StartStaging : SEplayer
 
         PlaySound(1);
         PlayBoolAnime(1);
+
+        yield return new WaitForSeconds(1.0f);
+        
+        earthDistansObj.SetActive(true);
     }
 }
