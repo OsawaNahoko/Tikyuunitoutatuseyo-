@@ -10,7 +10,10 @@ public class earth : earth_Distans
 
     void Start()
     {
+        //Base_planetから呼び出しています。
         StartCoroutine(planet_Move(earthScale,earthWaitTime,earthSpeed));
-        StartCoroutine(earthDistansCount(earthScale * 10,earthWaitTime * 0.1f));
+
+        //eath_Distansから呼び出しています。
+        StartCoroutine(earthDistansCount(earthScale * 100,earthWaitTime * 0.071f));
     }
 }

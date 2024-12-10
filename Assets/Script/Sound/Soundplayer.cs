@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Soundplayer : MonoBehaviour
+public class Soundplayer : AnimetionControler
 {
     [SerializeField] AudioClip[] soundArrey;
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
 
     protected void PlaySound(int Number)
     {
         if(audioSource == null)
         {
-            audioSource = this.gameObject.GetComponent<AudioSource>();
+            Debug.Log("audioSourceがnullです。");
         }
-        audioSource.PlayOneShot(soundArrey[Number]);
+        else
+        {
+            audioSource.PlayOneShot(soundArrey[Number]);
+        }
     }
+        
 
 }

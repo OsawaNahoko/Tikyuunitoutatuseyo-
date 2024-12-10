@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartStaging : AnimetionControler
+public class StartStaging : Soundplayer
 {
     bool PlayFlag = false;
     public float WaitTime;
+
+    void Start()
+    {
+        PlayTriggerAnime(0);
+    }
 
     public void SEPlay()
     {
@@ -19,14 +24,15 @@ public class StartStaging : AnimetionControler
             return;
         }
     }
+
     IEnumerator Staging(float Time)
     {
         PlaySound(0);
-        PlayAnimetion(0);
+        PlayBoolAnime(0);
 
         yield return new WaitForSeconds(Time);
 
         PlaySound(1);
-        PlayAnimetion(1);
+        PlayBoolAnime(1);
     }
 }

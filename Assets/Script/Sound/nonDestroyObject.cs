@@ -13,6 +13,7 @@ public class nonDestroyObject : MonoBehaviour
 		{
         Destroy(this.gameObject); // 自分自身を破棄して終了
     	return;
+
         }
         else if(isLoad == false)
         {
@@ -20,6 +21,17 @@ public class nonDestroyObject : MonoBehaviour
         }
     	
         DontDestroyOnLoad(this.gameObject); 
+
+        // void Start()
+        // {
+        //     SceneManager.activeSceneChanged += OnActiveSceneChanged;
+        // }
+
+	    // void OnActiveSceneChanged ( Scene prevScene, Scene nextScene )
+        //  {
+            
+        //  }
+		// //シーンがどう変わったかで判定
     }
     
 }
