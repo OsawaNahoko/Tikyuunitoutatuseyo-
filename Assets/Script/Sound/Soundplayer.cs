@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Soundplayer : AnimetionControler
+public class SEplayer : AnimetionControler
 {
     [SerializeField] AudioClip[] soundArrey;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource SEaudio;
 
     protected void PlaySound(int Number)
     {
-        if(audioSource == null)
+        if(SEaudio == null)
         {
             Debug.Log("audioSourceがnullです。");
         }
         else
         {
-            audioSource.PlayOneShot(soundArrey[Number]);
+            SEaudio.PlayOneShot(soundArrey[Number]);
         }
     }
         

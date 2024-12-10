@@ -63,10 +63,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -289534796066831230}
-    m_Position: {x: -170, y: 100, z: 0}
+    m_Position: {x: -180, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3880218769722834705}
-    m_Position: {x: -300, y: 210, z: 0}
+    m_Position: {x: -380, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 248820145674396541}
     m_Position: {x: -20, y: 210, z: 0}
@@ -76,7 +76,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: -150, y: 20, z: 0}
+  m_EntryPosition: {x: -160, y: -170, z: 0}
   m_ExitPosition: {x: 240, y: 170, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -289534796066831230}
@@ -135,7 +135,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: FadeOUtFlag
+  - m_Name: FadeOUTFlag
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -190,7 +190,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FadeINTrigger
+    m_ConditionEvent: FadeINFlag
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3880218769722834705}
@@ -215,7 +215,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FadeOUTTrigger
+    m_ConditionEvent: FadeOUTFlag
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 248820145674396541}
@@ -240,7 +240,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FadeOUtFlag
+    m_ConditionEvent: FadeOUTFlag
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 248820145674396541}

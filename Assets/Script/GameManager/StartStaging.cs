@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartStaging : Soundplayer
+public class StartStaging : SEplayer
 {
     bool PlayFlag = false;
-    public float WaitTime;
+    [SerializeField]float WaitTime;
 
-    void Start()
+
+    void Awake()
     {
-        PlayTriggerAnime(0);
+        PlayFadeIN();
+        GameManager.GameSeneFlag = false;
     }
 
     public void SEPlay()

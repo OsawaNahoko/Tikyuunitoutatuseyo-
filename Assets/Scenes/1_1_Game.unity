@@ -478,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 269315077}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.05999971, y: -2.8000007, z: 0}
+  m_LocalPosition: {x: 0.05999971, y: -2.8000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1022,7 +1022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimatorArray: []
-  TriggerArray: []
   FlagArray: []
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   BackimagePalent: {fileID: 1271173187}
@@ -2709,21 +2708,19 @@ MonoBehaviour:
   - {fileID: 1140627682}
   - {fileID: 1111648006}
   - {fileID: 2014942948}
-  TriggerArray:
-  - FadeINTrigger
-  - FadeOUTTrigger
   FlagArray:
   - GameOverFlag
   - GameClearFlag
   - MeteoDestroyFlag
   - FadeINFlag
-  - FadeOUtFlag
+  - FadeOUTFlag
   soundArrey:
   - {fileID: 8300000, guid: 07759f029b4d7b04f978dc9de6e0f50c, type: 3}
   - {fileID: 8300000, guid: b536ed2ab7adeef45b7404dfd816024f, type: 3}
-  audioSource: {fileID: 209789776}
+  SEaudio: {fileID: 209789776}
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   GameLife: {fileID: 240857130}
+  FadeObject: {fileID: 2014942947}
   GameLifeArrey:
   - {fileID: 21300000, guid: 40effcdd41fabc544a095106b81ee93c, type: 3}
   - {fileID: 21300000, guid: 0fbab553b854c5e4fbb29aa5f9d80a0b, type: 3}
@@ -2784,7 +2781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimatorArray: []
-  TriggerArray: []
   FlagArray: []
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   BackimagePalent: {fileID: 1271173187}

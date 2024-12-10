@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Soundplayer
+public class GameManager : SEplayer
 {
     [SerializeField] GlobalData globalData;
 
     [SerializeField] GameObject   GameLife;
+    [SerializeField] GameObject   FadeObject;
     [SerializeField] Sprite[]     GameLifeArrey;
     [SerializeField] GameObject[] GameUIArrey;
+
     //０がゲームオーバー１がゲームクリア
     //０がフェードイン　１フェードアウト
+    public static bool GameSeneFlag;
     int HitCount;
     SpriteRenderer  LifeSpriterend;
-
-    //ひとつ前のシーン名
-	string beforeScene = "";
-
-    Scene prevScene;
-    Scene nextScene;
+    SpriteRenderer  FadeSpriterend;
     
     public void FadeIN()
     {
@@ -31,23 +29,34 @@ public class GameManager : Soundplayer
         PlayFadeOUT();
     }
 
+    void Awake()
+    {
+         if(GameSeneFlag == true)
+        {
+            FadeSpriterend.color = new (0,0,0,255);
+        }
+    }
+
     void Start()
     {
         globalData.GameClearFlag = false;
         globalData.GameOverFlag  = false;
         LifeSpriterend           = GameLife.GetComponent<SpriteRenderer>();
-        SceneManager.activeSceneChanged += OnActiveSceneChanged;
+        FadeSpriterend           = FadeObject.GetComponent<SpriteRenderer>();
+        OnActiveSceneChanged();
     }
 
-    void OnActiveSceneChanged( Scene prevScene, Scene nextScene )
+    void OnActiveSceneChanged()
     {
-        if(beforeScene == "1_1_Game" && nextScene.name == "1_1_Game")
+        if(GameSeneFlag == true)
         { 
-            PlayTriggerAnime(0);
+            PlayFadeIN();
+            Debug.Log(GameSeneFlag);
         }
-        else
+  else if(GameSeneFlag == false)
         {
-            PlayTriggerAnime(1);
+            GameSeneFlag = true;
+            Debug.Log(GameSeneFlag);
         }
     }
 
