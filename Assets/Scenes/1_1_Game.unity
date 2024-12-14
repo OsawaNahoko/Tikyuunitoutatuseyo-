@@ -2092,8 +2092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   earthDistansText: {fileID: 1956865863}
-  earthScale: 300
-  earthWaitTime: 0.2
+  earthScale: 380
+  earthWaitTime: 0.02
 --- !u!61 &1435697689
 BoxCollider2D:
   m_ObjectHideFlags: 0

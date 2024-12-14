@@ -5,30 +5,19 @@ using UnityEngine.UI;
 
 public class earth_Distans : Base_planet
 {
-    [SerializeField] Text earthDistansText;
-    decimal Distansdecimal = 380.0m;
+    // [SerializeField] Text earthDistansText;
+    // decimal Distansdecimal = 380.0m;
+    // float Distansfloat;
 
-    protected IEnumerator earthDistansCount(int Time,float Speed)
-    {
-        for(int i = 0; i < Time; i++)
-        {    
-            Distansdecimal -= 0.1m;
-            float Distansfloat =(float)Distansdecimal;
+    // protected void earthDistansCount(int Time,float Speed)
+    // {
+    //     if(Distansfloat <= 0.0f)
+    //     {
+    //         Debug.Log("処理通っているよ");
+    //         earthDistansText.text  = $"{0.0f:F2}Km";
+    //         yield break; // ループを終了
+    //     }
 
-        if(Distansfloat <= 0.0f)
-        {
-            Debug.Log("処理通っているよ");
-            earthDistansText.text  = $"{0.0f:F2}Km";
-            yield break; // ループを終了
-        }
-        earthDistansText.text  = $"{Distansfloat:F2}Km";
-        yield return new WaitForSeconds(Speed);
-
-        if(globalData.GameOverFlag == true)
-        {
-            yield break;
-        }
-        
-        }
-    }
+    //     earthDistansText.text  = $"{Distansfloat:F2}Km";
+    // }
 }

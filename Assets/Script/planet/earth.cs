@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class earth : earth_Distans
 {
-    [SerializeField]int earthScale;
-    [SerializeField]float earthWaitTime;
-    decimal earthSpeed = 0.01m;
+    // [SerializeField]int earthScale;
+    // [SerializeField]float earthWaitTime;
+    // decimal earthSpeed = 0.01m;
 
     void Start()
     {
         //Base_planetから呼び出しています。
-        StartCoroutine(planet_Move(earthScale,earthWaitTime,earthSpeed));
+        StartCoroutine(TimeCount());
+        ComponentSet();
 
         //eath_Distansから呼び出しています。
-        StartCoroutine(earthDistansCount(earthScale * 100,earthWaitTime * 0.066f));
+        // StartCoroutine(earthDistansCount(earthScale,earthWaitTime));
     }
+
+    void FixedUpdate()
+    {
+        planet_Move(30.0f);
+    }
+
 }

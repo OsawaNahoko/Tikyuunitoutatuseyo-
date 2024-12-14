@@ -2,45 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Base_planet : MonoBehaviour
+public class Base_planet : Timer
 {
-    decimal Scaledecimal;
-    float Scalefloat;
+    BoxCollider2D thiscol2D;
 
-    [SerializeField] protected GlobalData globalData;
-    
-    protected IEnumerator planet_Move(int planetScale,float WaitTime,decimal AddScale)
+    protected void ComponentSet()
     {
-        //自身のコライダーとスプライトレンダーを取得。
-        var thiscol2D       = this.gameObject.GetComponent<BoxCollider2D>();
-        var thisSpliteRend  = this.gameObject.GetComponent<SpriteRenderer>();
-        
+        //自身のコライダーを取得。
+        thiscol2D  = this.gameObject.GetComponent<BoxCollider2D>();
+    }
 
-        //隕石を徐々に大きくしてます。
-        for(int i = 0; i < planetScale; i++)
-        {
-            //decimalの値を代入
-            Scaledecimal += AddScale;
-            Scalefloat = (float)Scaledecimal;
+    protected void planet_Move(float ScaleLimit)
+    { 
+        decimal DesiScale = ScaleCount();
+        float Scale = (float)DesiScale;
 
-            this.transform.localScale = new Vector3(Scalefloat,Scalefloat,Scalefloat);
-            yield return new WaitForSeconds(WaitTime);
-
-            if(globalData.GameOverFlag == true)
-            {
-                yield break;
-            }
-        }
-
-        if(Scalefloat >= planetScale * 0.01)
+        this.transform.localScale = new Vector3(Scale,Scale,Scale);
+        if( Scale >= ScaleLimit)
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");
-            thiscol2D.enabled = true;
+            if(this.thiscol2D != null)
+            {
+                thiscol2D.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Colliderがnullです。");
+            }
 
-            yield return new WaitForSeconds(3.0f);
-            this.transform.localScale = new Vector3(0,0,0);
-            Destroy(this.gameObject);
         }
     }
+
+    //     //隕石を徐々に大きくしてます。
+    //     for(int i = 0; i < planetScale; i++)
+    //     {
+    //         //decimalの値を代入
+    //         Scaledecimal += AddScale;
+    //         Scalefloat = (float)Scaledecimal;
+
+    //         this.transform.localScale = new Vector3(Scalefloat,Scalefloat,Scalefloat);
+    //         yield return new WaitForSeconds(WaitTime);
+
+    //         if(globalData.GameOverFlag == true)
+    //         {
+    //             yield break;
+    //         }
+    //     }
+
+    //     if(Scalefloat >= planetScale * 0.01)
+    //     {
+    //         //sizeが限界に到達したら
+    //         Debug.Log("サイズ限界になったよ");
+    //         thiscol2D.enabled = true;
+
+    //         yield return new WaitForSeconds(3.0f);
+    //         Destroy(this.gameObject);
+    //     }
+    // }
 }
