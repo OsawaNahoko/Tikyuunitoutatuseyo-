@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    decimal Scaledecimal;
-    decimal Distansdecimal;
+    decimal Scaledecimal   = 0.0m; 
+    decimal Distansdecimal = 380.0m;
 
     [SerializeField] protected GlobalData globalData;
 
@@ -21,9 +21,6 @@ public class Timer : MonoBehaviour
 
     protected IEnumerator TimeCount()
     {
-        // Scaledecimal  =(decimal)Timer;
-        // Distansdecimal=(decimal)Timer;
-
          //Timerを刻んでいます。
         for(int i = 0; i < 380; i++)
         {
@@ -36,7 +33,7 @@ public class Timer : MonoBehaviour
                 yield break;
             }
 
-         yield return new WaitForSeconds(1.0f);
+         yield return new WaitForSeconds(0.1f);
 
         }
     }

@@ -14,13 +14,12 @@ public class earth : earth_Distans
         StartCoroutine(TimeCount());
         ComponentSet();
 
-        //eath_Distansから呼び出しています。
-        // StartCoroutine(earthDistansCount(earthScale,earthWaitTime));
     }
 
     void FixedUpdate()
     {
-        planet_Move(30.0f);
+        planet_Move(380.0f);
+        earthDistansCount();
     }
 
 }
