@@ -33,7 +33,7 @@ public class SceneScript : MonoBehaviour
 
         IEnumerator GameScene_2(float WaitTime)
     {
-        Debug.Log("Gameをロード");
+        Debug.Log("Game_2をロード");
         yield return new WaitForSeconds(WaitTime);
         SceneManager.LoadScene("1_2_Game");
     }

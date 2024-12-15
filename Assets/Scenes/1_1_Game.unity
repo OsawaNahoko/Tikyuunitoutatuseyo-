@@ -1008,8 +1008,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4bfe05e94130b41bceb8b424504d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimatorArray: []
-  FlagArray: []
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   BackimagePalent: {fileID: 1271173187}
   meteoObjArryey:
@@ -1306,7 +1304,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4079886874586821951, guid: dcef4e804f371de45afebabed9ffa2df, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144815500886861003, guid: dcef4e804f371de45afebabed9ffa2df, type: 3}
+      propertyPath: meteoscale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144815500886861003, guid: dcef4e804f371de45afebabed9ffa2df, type: 3}
+      propertyPath: DistansFloat
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2082,6 +2088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
+  DistansFloat: 380
+  earthDistansText: {fileID: 1956865863}
 --- !u!61 &1435697689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2873,8 +2881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4bfe05e94130b41bceb8b424504d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimatorArray: []
-  FlagArray: []
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   BackimagePalent: {fileID: 1271173187}
   meteoObjArryey:

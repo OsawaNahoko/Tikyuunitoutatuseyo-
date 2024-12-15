@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class meteorite : Base_planet
 {
-    // void Start()
-    // {
-    //     StartCoroutine(planet_Move(50,0.1f,0.01m));
-    // }
+    [SerializeField]float meteoscale;
+
+    void Start()
+    {
+        //Base_planetから呼び出しています。
+        ComponentSet();
+        StartCoroutine(meteo_Move(meteoscale));
+        Debug.Log("処理通っています。");
+    }
 }

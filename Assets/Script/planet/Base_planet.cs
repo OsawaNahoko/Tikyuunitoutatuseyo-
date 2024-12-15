@@ -12,13 +12,14 @@ public class Base_planet : Timer
         thiscol2D  = this.gameObject.GetComponent<BoxCollider2D>();
     }
 
-    protected void planet_Move(float ScaleLimit)
+    protected void Earth_Move(float ScaleLimit)
     { 
-        decimal DesiScale = ScaleCount();
+        decimal DesiScale = earthScale();
         float Scale = (float)DesiScale;
 
         this.transform.localScale = new Vector3(Scale,Scale,Scale);
-        if( Scale >= ScaleLimit)
+
+        if( Scale >= ScaleLimit * 0.01)
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");
@@ -30,34 +31,41 @@ public class Base_planet : Timer
             {
                 Debug.LogError("Colliderがnullです。");
             }
-
         }
     }
 
-    //     //隕石を徐々に大きくしてます。
-    //     for(int i = 0; i < planetScale; i++)
-    //     {
-    //         //decimalの値を代入
-    //         Scaledecimal += AddScale;
-    //         Scalefloat = (float)Scaledecimal;
+    protected IEnumerator meteo_Move(float ScaleLimit)
+    { 
+        float Scale = 0.0f;
 
-    //         this.transform.localScale = new Vector3(Scalefloat,Scalefloat,Scalefloat);
-    //         yield return new WaitForSeconds(WaitTime);
+        for(float i= 0.0f;i < ScaleLimit; i++)
+        {
+            Scale += 0.01f;
+            yield return new WaitForSeconds(0.1f);
 
-    //         if(globalData.GameOverFlag == true)
-    //         {
-    //             yield break;
-    //         }
-    //     }
+            this.transform.localScale = new Vector3(Scale,Scale,Scale);
 
-    //     if(Scalefloat >= planetScale * 0.01)
-    //     {
-    //         //sizeが限界に到達したら
-    //         Debug.Log("サイズ限界になったよ");
-    //         thiscol2D.enabled = true;
+            Debug.Log("処理通っています。");
 
-    //         yield return new WaitForSeconds(3.0f);
-    //         Destroy(this.gameObject);
-    //     }
-    // }
+            if(globalData.GameOverFlag == true)
+            {
+                yield break;
+            }
+        }
+
+        if( Scale >= ScaleLimit *0.01 - 0.01)
+        {
+            //sizeが限界に到達したら
+            Debug.Log("サイズ限界になったよ");
+            if(this.thiscol2D != null)
+            {
+                thiscol2D.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Colliderがnullです。");
+            }
+        }
+    }
+
 }

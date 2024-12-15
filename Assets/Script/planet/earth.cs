@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class earth : earth_Distans
 {
-    // [SerializeField]int earthScale;
-    // [SerializeField]float earthWaitTime;
-    // decimal earthSpeed = 0.01m;
+    float earthCount;
+    float Scale;
 
     void Start()
     {
-        //Base_planetから呼び出しています。
-        StartCoroutine(TimeCount());
-        ComponentSet();
+        //earthDistansの値を代入
+        earthCount = Distansfloat();
 
+        decimal DesiScale = earthScale();
+        Scale = (float)DesiScale;
+
+        //Base_planetから呼び出しています。
+        StartCoroutine(EarthCount());
+        ComponentSet();
     }
 
     void FixedUpdate()
     {
-        planet_Move(380.0f);
+        Earth_Move(earthCount);
         earthDistansCount();
+        Debug.Log("FixedUpdateを呼んでいます");
     }
 
 }

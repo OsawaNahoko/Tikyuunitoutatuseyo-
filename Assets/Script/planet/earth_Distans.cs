@@ -9,7 +9,7 @@ public class earth_Distans : Base_planet
 
     protected void earthDistansCount()
     {
-        decimal Distansdecimal = DistansCount();
+        decimal Distansdecimal = earthDistans();
         float DistansFloat =(float)Distansdecimal;
 
         if(DistansFloat <= 0.0f)

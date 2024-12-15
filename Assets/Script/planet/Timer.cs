@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    decimal Scaledecimal   = 0.0m; 
-    decimal Distansdecimal = 380.0m;
+    [SerializeField]protected GlobalData globalData;
+    decimal earthScaledecimal   = 0.0m;
+    decimal earthDistansdecimal = 0.0m;
+    [SerializeField]float DistansFloat;
 
-    [SerializeField] protected GlobalData globalData;
-
-    protected decimal ScaleCount()
+    protected decimal earthScale()
     {
-        return Scaledecimal;
+        return earthScaledecimal;
     }
 
-    protected decimal DistansCount()
+    protected decimal earthDistans()
     {
-        return Distansdecimal;
+        return earthDistansdecimal;
     }
 
-    protected IEnumerator TimeCount()
+    protected float Distansfloat()
     {
+        return DistansFloat;
+    }
+
+    protected IEnumerator EarthCount()
+    {
+        earthDistansdecimal = (decimal)DistansFloat;
+
          //Timerを刻んでいます。
-        for(int i = 0; i < 380; i++)
+        for(float i = 0.0f; i < DistansFloat; i++)
         {
-            //decimalの値を代入
-            Scaledecimal   += 1.0m;
-            Distansdecimal -= 1.0m;
+            //計算しています。
+            earthScaledecimal   += 0.01m;
+            earthDistansdecimal -= 1.0m;
 
             if(globalData.GameOverFlag == true)
             {
