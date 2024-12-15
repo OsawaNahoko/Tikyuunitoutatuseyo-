@@ -770,7 +770,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 791511149, guid: 6b6763d001e5903429cc2e7d8cb6ffef, type: 3}
+  m_Sprite: {fileID: 1877209743, guid: 0a30db8cfb762d84185d168eb1a6d13f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -997,8 +997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4bfe05e94130b41bceb8b424504d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimatorArray: []
-  FlagArray: []
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
   BackimagePalent: {fileID: 0}
   meteoObjArryey: []
@@ -2069,7 +2067,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 791511149, guid: 6b6763d001e5903429cc2e7d8cb6ffef, type: 3}
+  m_Sprite: {fileID: 1877209743, guid: 0a30db8cfb762d84185d168eb1a6d13f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2662,9 +2660,9 @@ SceneRoots:
   - {fileID: 1852719841}
   - {fileID: 770418809}
   - {fileID: 1111648000}
+  - {fileID: 241193087}
   - {fileID: 1271173187}
   - {fileID: 1702627292}
   - {fileID: 930841557}
-  - {fileID: 241193087}
   - {fileID: 244930764}
   - {fileID: 946396572}
