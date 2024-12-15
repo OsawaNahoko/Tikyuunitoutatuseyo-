@@ -14,8 +14,6 @@ public class earth : earth_Distans
         //Base_planetから呼び出しています。
         StartCoroutine(EarthCount());
         ComponentSet();
-
-        Debug.Log("earthのStart");
     }
 
     void FixedUpdate()

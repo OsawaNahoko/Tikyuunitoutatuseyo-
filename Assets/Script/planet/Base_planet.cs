@@ -5,6 +5,7 @@ using UnityEngine;
 public class Base_planet : Timer
 {
     BoxCollider2D thiscol2D;
+    bool ONFlag = false;
 
     protected void ComponentSet()
     {
@@ -19,7 +20,7 @@ public class Base_planet : Timer
 
         this.transform.localScale = new Vector3(Scale,Scale,Scale);
 
-        if( Scale >= ScaleLimit * 0.01 - 0.01)
+        if( Scale >= ScaleLimit * 0.01 - 0.01 && ONFlag == false)
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");
@@ -31,6 +32,8 @@ public class Base_planet : Timer
             {
                 Debug.LogError("Colliderがnullです。");
             }
+
+            ONFlag = true;
         }
     }
 
@@ -48,6 +51,10 @@ public class Base_planet : Timer
             Debug.Log("処理通っています。");
 
             if(globalData.GameOverFlag == true)
+            {
+                yield break;
+            }
+             if(globalData.GameClearFlag == true)
             {
                 yield break;
             }
