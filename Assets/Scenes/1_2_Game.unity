@@ -1461,7 +1461,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 90
-  m_Sprite: {fileID: 1282474569, guid: f39fca3ff5e6db941b0d38257c304b6e, type: 3}
+  m_Sprite: {fileID: 343328707, guid: b9816f3572c650046ae03d0afc4d2805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2091,9 +2091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalData: {fileID: 11400000, guid: d7d17fa9ef75f674e8b45898e47ec5c3, type: 2}
-  earthDistansText: {fileID: 1956865863}
-  earthScale: 300
-  earthWaitTime: 0.2
 --- !u!61 &1435697689
 BoxCollider2D:
   m_ObjectHideFlags: 0
