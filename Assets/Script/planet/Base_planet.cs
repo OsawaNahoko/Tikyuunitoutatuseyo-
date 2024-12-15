@@ -19,7 +19,7 @@ public class Base_planet : Timer
 
         this.transform.localScale = new Vector3(Scale,Scale,Scale);
 
-        if( Scale >= ScaleLimit * 0.01)
+        if( Scale >= ScaleLimit * 0.01 - 0.01)
         {
             //sizeが限界に到達したら
             Debug.Log("サイズ限界になったよ");

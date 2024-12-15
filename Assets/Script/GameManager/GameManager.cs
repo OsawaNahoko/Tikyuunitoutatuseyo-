@@ -27,7 +27,7 @@ public class GameManager : SEplayer
         PlayFadeOUT();
     }
 
-    void Start()
+    void Awake()
     {
         globalData.GameClearFlag = false;
         globalData.GameOverFlag  = false;

@@ -4,27 +4,24 @@ using UnityEngine;
 
 public class earth : earth_Distans
 {
-    float earthCount;
-    float Scale;
+    float ScaleLimit;
 
     void Start()
     {
         //earthDistansの値を代入
-        earthCount = Distansfloat();
-
-        decimal DesiScale = earthScale();
-        Scale = (float)DesiScale;
+        ScaleLimit = Distansfloat();
 
         //Base_planetから呼び出しています。
         StartCoroutine(EarthCount());
         ComponentSet();
+
+        Debug.Log("earthのStart");
     }
 
     void FixedUpdate()
     {
-        Earth_Move(earthCount);
+        Earth_Move(ScaleLimit);
         earthDistansCount();
-        Debug.Log("FixedUpdateを呼んでいます");
     }
 
 }

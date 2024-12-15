@@ -11,6 +11,5 @@ public class meteorite : Base_planet
         //Base_planetから呼び出しています。
         ComponentSet();
         StartCoroutine(meteo_Move(meteoscale));
-        Debug.Log("処理通っています。");
     }
 }

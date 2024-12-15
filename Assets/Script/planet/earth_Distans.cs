@@ -14,7 +14,6 @@ public class earth_Distans : Base_planet
 
         if(DistansFloat <= 0.0f)
         {
-            Debug.Log("処理通っているよ");
             earthDistansText.text  = $"{0.0f:F2}Km";
         }
 

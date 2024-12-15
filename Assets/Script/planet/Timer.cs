@@ -35,6 +35,8 @@ public class Timer : MonoBehaviour
             earthScaledecimal   += 0.01m;
             earthDistansdecimal -= 1.0m;
 
+            Debug.Log("時を刻んでいます");
+
             if(globalData.GameOverFlag == true)
             {
                 yield break;
