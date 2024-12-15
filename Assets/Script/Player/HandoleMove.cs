@@ -25,7 +25,7 @@ public class HandoleMove : MonoBehaviour
 
     void Move()
     {
-        if(earth != null)
+        if(earth != null && Backgraund != null)
         {
             float Loss90RotationZ = HandoleRotationZ - 90;
 
