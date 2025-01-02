@@ -10,7 +10,6 @@ public class earth : earth_Distans
     {
         //earthDistansの値を代入
         ScaleLimit = Distansfloat();
-
         //Base_planetから呼び出しています。
         StartCoroutine(EarthCount());
         ComponentSet();
